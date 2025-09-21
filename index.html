@@ -27,9 +27,6 @@
             <!-- Contenedor de chips -->
             <div id="chipsContainer" class="chips-container" aria-label="Lista de amigos"></div>
 
-            <!-- Resultado del sorteo -->
-            <div id="resultado" class="result-list" aria-live="polite"></div>
-
             <div class="button-container">
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
@@ -40,6 +37,16 @@
 
     </main>
 
+    <!-- Modal -->
+    <div id="resultadoModal" class="modal">
+        <div class="modal-content">
+            <p class="section-title" aria-live="polite">🎉</p>
+            <p class="result-text" aria-live="polite">El amigo secreto es:</p>
+            <p id="resultado" class="result-value" aria-live="polite"></p>
+
+            <button onclick="cerrarModal()" class="cerrar-modal">Cerrar</button>
+        </div>
+    </div>
 
     <script src="./utils/amigos.js"></script>
     <script src="./utils/sorteo.js"></script>

@@ -42,6 +42,13 @@ function obtenerValorInput() {
 }
 
 function mostrarResultado(amigoSorteado) {
-    const resultado = document.getElementById("resultado");
-    resultado.innerHTML = "🎉 El amigo secreto es: <strong>" + amigoSorteado + "</strong>";
+    //const resultado = document.getElementById("resultado");
+    //resultado.innerHTML = "🎉 El amigo secreto es: <strong>" + amigoSorteado + "</strong>";
+
+    document.getElementById("resultado").innerHTML = amigoSorteado;
+    document.getElementById("resultadoModal").style.display = "block";
+}
+
+function cerrarModal() {
+    document.getElementById("resultadoModal").style.display = "none";
 }

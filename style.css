@@ -134,12 +134,24 @@ ul {
     margin: 20px 0;
 }
 
-.result-list {
+.result-text {
+    margin: 15px;
+    color: #333333;
+    text-align: center;
+
+    font-family: "Inter", serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.result-value {
     margin: 15px;
     color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
     text-align: center;
+
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 1000;
 }
 
 /* Botón de sortear título */
@@ -161,7 +173,9 @@ ul {
     background-color: var(--color-button-hover);
 }
 
+/* Nuevos Estilos */
 
+/* Chips para amigos */
 .chips-container {
     background-color: var(--color-white);
     border: 2px solid #000;
@@ -201,4 +215,52 @@ ul {
 }
 .chip .remove:hover {
     color: red;
+}
+
+/* Fondo del modal */
+.modal {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Caja del contenido */
+.modal-content {
+    background-color: #fff;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+.close:hover {
+    color: darkred;
+}
+
+/* Cerrar Modal*/
+.cerrar-modal {
+    background-color: darkred;
+    color: white;
+    padding: 11px 50px;
+    margin-top: 25px;
 }
