@@ -22,12 +22,9 @@ function sortearAmigo() {
         return;
     }
 
-    const indiceAleatorio = Math.floor(Math.random() * lista.length);
+    const amigoSorteado = sortearLista(lista);
 
-    const amigoSorteado = lista[indiceAleatorio];
-
-    const resultado = document.getElementById("resultado");
-    resultado.innerHTML = "🎉 El amigo secreto es: <strong>" + amigoSorteado + "</strong>";
+    mostrarResultado(amigoSorteado)
 
     console.log("Amigo sorteado:", amigoSorteado);
 }
