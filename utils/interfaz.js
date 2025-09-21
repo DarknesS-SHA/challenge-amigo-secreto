@@ -32,6 +32,11 @@ function limpiarInput() {
     document.getElementById("amigo").value = "";
 }
 
+function limpiarResultado() {
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+}
+
 function obtenerValorInput() {
     return document.getElementById("amigo").value.trim();
 }

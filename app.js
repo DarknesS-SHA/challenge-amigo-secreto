@@ -10,7 +10,7 @@ function agregarAmigo() {
     nuevoAmigo(nombre);
     mostrarAmigo(nombre);
     limpiarInput();
-
+    limpiarResultado();
     console.log(listarAmigos());
 }
 
