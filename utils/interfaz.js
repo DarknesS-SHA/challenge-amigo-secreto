@@ -1,8 +1,31 @@
 function mostrarAmigo(nombre) {
-    const lista = document.getElementById("listaAmigos");
-    const li = document.createElement("li");
-    li.textContent = nombre;
-    lista.appendChild(li);
+    const chipsContainer = document.getElementById("chipsContainer");
+
+    const chip = crearChip(nombre)
+
+    const btnRemove = eliminarChip(nombre,chip)
+
+    chip.appendChild(btnRemove);
+    chipsContainer.appendChild(chip);
+}
+function crearChip(nombre) {
+    const chip = document.createElement("div");
+    chip.className = "chip";
+    chip.textContent = nombre;
+    return chip;
+
+}
+
+function eliminarChip(nombre,chip) {
+    const btnRemove = document.createElement("div");
+    btnRemove.className = "remove";
+    btnRemove.textContent = "✕";
+    btnRemove.onclick = function () {
+        chip.remove();
+        // también eliminar del array amigos
+        eliminarAmigo(nombre);
+    };
+    return btnRemove;
 }
 
 function limpiarInput() {

@@ -135,7 +135,7 @@ ul {
 }
 
 .result-list {
-    margin-top: 15px;
+    margin: 15px;
     color: #05DF05;
     font-size: 22px;
     font-weight: bold;
@@ -159,4 +159,46 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+
+.chips-container {
+    background-color: var(--color-white);
+    border: 2px solid #000;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 200px;
+    gap: 8px;
+    margin: 12px;
+    padding: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.chip {
+    background-color: var(--color-white);
+    border: 2px solid #000;
+    border-radius: 25px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    height: 32px;
+    font-size: 16px;
+}
+
+.chip .remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--color-tertiary);
+}
+.chip .remove:hover {
+    color: red;
 }
