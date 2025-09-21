@@ -13,3 +13,21 @@ function agregarAmigo() {
 
     console.log(listarAmigos());
 }
+
+function sortearAmigo() {
+    const lista = listarAmigos();
+
+    if (lista.length === 0) {
+        alert("No hay amigos para sortear. Agrega al menos uno.");
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * lista.length);
+
+    const amigoSorteado = lista[indiceAleatorio];
+
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = "🎉 El amigo secreto es: <strong>" + amigoSorteado + "</strong>";
+
+    console.log("Amigo sorteado:", amigoSorteado);
+}
